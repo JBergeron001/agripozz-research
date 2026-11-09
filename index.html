@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agri-Pozz Field Research Initiative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1d6b63; --teal-d:#134a44; --gold:#c8870a; --ink:#1f2523; --muted:#5b6662;
+  --line:#dfe5e2; --bg:#ffffff; --soft:#f4f7f5; --sand:#faf5ec;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:"Barlow Condensed",sans-serif;line-height:1.1;margin:0 0 .5em;letter-spacing:.01em}
+h2{font-size:2rem;color:var(--teal-d)}
+h3{font-size:1.3rem;color:var(--teal-d)}
+a{color:var(--teal)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header.hero{background:linear-gradient(135deg,var(--teal-d),var(--teal));color:#fff;padding:56px 0 46px}
+.eyebrow{font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.14em;color:#f3c66b;font-weight:600;font-size:.95rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:.2em 0 .3em}
+.hero p{max-width:720px;font-size:1.08rem;color:#e6f0ee;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:999px;font-size:.85rem}
+nav.toc{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:8px;padding-bottom:8px}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.88rem;padding:6px 10px;border-radius:6px}
+nav.toc a:hover{background:var(--soft);color:var(--teal-d)}
+section{padding:46px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--soft)}
+.lead{font-size:1.06rem;color:var(--muted);max-width:780px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.card h3{margin-bottom:.35em}
+.card p{margin:.2em 0;color:var(--muted);font-size:.95rem}
+.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:600}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:.92rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--teal-d);color:#fff;font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+td small{color:var(--muted)}
+.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;font-weight:600;white-space:nowrap}
+.t-grant{background:#e3f1ee;color:var(--teal-d)}
+.t-free{background:#fdf0d8;color:#8a5b00}
+.t-equity{background:#ece8f6;color:#4b3a85}
+.t-soon{background:#fde2e0;color:#9a2a1f}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+ol.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+ol.steps li{position:relative;padding:16px 18px 16px 64px;background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px}
+ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--gold);color:#fff;font-family:"Barlow Condensed";font-weight:700;font-size:1.15rem;display:flex;align-items:center;justify-content:center}
+ol.steps .when{font-size:.8rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+ol.steps ul{margin:.4em 0 0;padding-left:18px;color:var(--muted);font-size:.94rem}
+.note{background:var(--sand);border-left:4px solid var(--gold);padding:12px 16px;border-radius:6px;font-size:.92rem;color:#5a4a2a;margin-top:18px}
+.org{margin-bottom:26px}
+.org h3{display:flex;align-items:baseline;gap:10px}
+.org h3 span{font-family:Inter;font-size:.85rem;color:var(--muted);font-weight:400}
+footer{background:var(--teal-d);color:#d5e4e1;padding:30px 0;font-size:.88rem}
+footer a{color:#f3c66b}
+.ask{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:18px}
+.ask div{background:#fff;border-top:4px solid var(--teal);border-radius:8px;padding:14px 16px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ask b{display:block;font-family:"Barlow Condensed";font-size:1.15rem;color:var(--teal-d)}
+@media print{nav.toc{display:none}section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Professional Proposal · St. Louis, Missouri · November 2026</div>
+    <h1>Agri-Pozz Field Research Initiative</h1>
+    <p>A proposed St. Louis agricultural research venture led by Jay Bergeron and Han Ko. We will independently test Agri-Pozz, a natural volcanic pozzolan soil amendment, in Midwest soils and crops, using grant funding and the region's shared research infrastructure, and publish credible, peer-quality data.</p>
+    <div class="chips">
+      <span class="chip">Natural pozzolan (ASTM C618 Class N)</span>
+      <span class="chip">Fertilizer-efficiency research</span>
+      <span class="chip">Grant-funded, capital-light</span>
+      <span class="chip">BioGenerator · BioSTL · Danforth Center</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#overview">Overview</a><a href="#research">Research plan</a><a href="#grants">Grants &amp; free resources</a><a href="#process">Process &amp; timeline</a><a href="#people">Who we want to talk to</a><a href="#asks">Our asks</a><a href="#team">Team</a>
+</div></nav>
+
+<section id="overview"><div class="wrap">
+  <h2>Overview</h2>
+  <p class="lead">Fertilizer is one of the largest input costs on Midwest farms, and nutrient loss is a leading water-quality problem in the Mississippi basin. Natural pozzolans are porous, silica-rich volcanic minerals. Published field-trial literature reports fertilizer-use reductions of up to 30% with mineral soil amendments of this class. Agri-Pozz now needs independent, replicated, Midwest-specific data before growers, agronomists and regulators can rely on it.</p>
+  <div class="grid g3" style="margin-top:22px">
+    <div class="card"><div class="kicker">The product</div><h3>Agri-Pozz</h3><p>Natural volcanic pumicite from an Eastern California deposit, lab-certified to ASTM C618 Class N, about 68% SiO<sub>2</sub>. Produced by Environmental Minerals, Inc. (EMI).</p></div>
+    <div class="card"><div class="kicker">The gap</div><h3>No Midwest data yet</h3><p>The fertilizer-reduction potential comes from published literature on this mineral class. EMI's own trials are scheduled. Midwest growers need local soils, local crops and neutral researchers.</p></div>
+    <div class="card"><div class="kicker">The venture</div><h3>Independent research company</h3><p>A small St. Louis company that designs, funds and manages the studies, using non-dilutive grants and fee-for-service labs, and owns and publishes the resulting dataset.</p></div>
+  </div>
+  <div class="note"><b>Claims standard.</b> All Agri-Pozz language on this page is about fertilizer efficiency and soil properties only. We make no pest or disease claims. "Up to 30%" refers to published field-trial literature; Agri-Pozz-specific trials are the purpose of this initiative.</div>
+</div></section>
+
+<section id="research" class="alt"><div class="wrap">
+  <h2>Research plan</h2>
+  <p class="lead">Staged from low-cost lab work to replicated field trials, so each grant funds the next level of evidence.</p>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card"><div class="kicker">Stage 1 · Characterize</div><h3>Material &amp; soil-interaction baseline</h3><p>Mineralogy, cation exchange capacity, water-holding capacity, pH effect and nutrient retention when blended with typical Missouri soils (silt loam, claypan, river bottomland).</p></div>
+    <div class="card"><div class="kicker">Stage 2 · Controlled growth</div><h3>Greenhouse rate trials</h3><p>Corn, soybean and a forage or specialty crop at several application rates, crossed with full and reduced fertilizer rates. Measure biomass, nutrient uptake, water use and leachate.</p></div>
+    <div class="card"><div class="kicker">Stage 3 · Field</div><h3>Replicated on-farm plots</h3><p>Randomized strip or plot trials with cooperating Missouri growers. Treatments include an untreated control, the label rate, and the label rate with reduced fertilizer. Yield, soil health indicators and economics.</p></div>
+    <div class="card"><div class="kicker">Stage 4 · Share</div><h3>Publish &amp; extend</h3><p>An open technical report, field days with extension partners, data for state regulatory filings, and a commercialization package that EMI and distributors can use.</p></div>
+  </div>
+  <h3 style="margin-top:28px">Core research questions</h3>
+  <ol style="color:var(--muted)">
+    <li>Does Agri-Pozz improve nitrogen and phosphorus use efficiency in Missouri soils, and by how much?</li>
+    <li>Can yields be held while fertilizer rates are reduced, and at what Agri-Pozz rate?</li>
+    <li>What happens to soil health indicators (aggregate stability, water-holding capacity, CEC) over one to three seasons?</li>
+    <li>Does it reduce nutrient leaching or runoff? This links to water quality and to watershed-scale benefits.</li>
+    <li>What is the grower's return per acre at current fertilizer prices?</li>
+  </ol>
+</div></section>
+
+<section id="grants"><div class="wrap">
+  <h2>Grants &amp; free resources</h2>
+  <p class="lead">Grant-first funding keeps the venture capital-light and the data independent. Award sizes and dates are drawn from current program notices and change every year; we confirm each one on the official program page before applying.</p>
+  <div class="tablewrap" style="margin-top:18px">
+  <table>
+    <thead><tr><th>Program</th><th>Type</th><th>Typical size</th><th>Timing</th><th>How it fits</th></tr></thead>
+    <tbody>
+      <tr><td><b>NCR-SARE Partnership Grant</b><br><small>North Central SARE (USDA)</small></td><td><span class="tag t-soon">Act now</span></td><td>Up to ~$50K (verify)<br><small>2 years</small></td><td>Current call lists a deadline of 12/03/2026 (confirm)</td><td>On-farm trials with a small group of growers. The project coordinator must be an ag professional, such as Extension, SWCD staff or a certified crop advisor, so we partner with one.</td></tr>
+      <tr><td><b>NCR-SARE Farmer Rancher &amp; Research and Education</b></td><td><span class="tag t-grant">Grant</span></td><td>Varies by program</td><td>Annual; calls typically in the fall</td><td>A cooperating grower applies for a Farmer Rancher grant; a university partner applies for Research and Education. We design and support the trial.</td></tr>
+      <tr><td><b>USDA NIFA SBIR / STTR Phase I</b><br><small>Topics 8.2 Plant Production &amp; Protection (Biology), 8.4 Air, Water &amp; Soils</small></td><td><span class="tag t-grant">Grant</span></td><td>~$175K–$181.5K<br><small>~8 months (SBIR) / 12 (STTR)</small></td><td>Annual. The RFA has historically come out in summer, with applications due in early fall.</td><td>The anchor grant for the company. STTR requires a research-institution partner such as the Danforth Center or MU, which suits us well. Phase II is up to ~$650K.</td></tr>
+      <tr><td><b>USDA NRCS Conservation Innovation Grants</b><br><small>CIG Classic · CIG On-Farm Trials</small></td><td><span class="tag t-grant">Grant</span></td><td>On-Farm Trials $250K–$5M, no match</td><td>FY26 closed July 27, 2026; next cycle expected 2027</td><td>The priorities include nutrient management and soil health demonstrations. A later-stage, multi-grower scale-up once Stage 2 data exist.</td></tr>
+      <tr><td><b>BioGenerator Labs: Grants to Business</b></td><td><span class="tag t-free">Free support</span></td><td>Coaching and grant-writing help; Proof of Concept grants</td><td>Ongoing</td><td>One-on-one help building competitive SBIR/STTR applications. Has a record of agtech wins.</td></tr>
+      <tr><td><b>BioGenerator Labs @ Helix Center (39 North)</b></td><td><span class="tag t-free">Low cost</span></td><td>Shared wet lab and equipment</td><td>Ongoing</td><td>Bench space for material characterization and sample prep, inside the 39 North agtech district.</td></tr>
+      <tr><td><b>Danforth Center Core Facilities</b><br><small>Plant Growth, Phenotyping, Bioanalytical, Data Science</small></td><td><span class="tag t-free">Fee-for-service</span></td><td>Pay per study</td><td>Ongoing</td><td>Controlled-environment trials and high-throughput phenotyping of plant health and water use. Its Access Fund ($2K–$20K) currently serves Latin American startups; we will ask whether a domestic equivalent exists.</td></tr>
+      <tr><td><b>MU Soil Health Assessment Center &amp; Soil and Plant Testing Lab</b></td><td><span class="tag t-free">Low cost</span></td><td>Per-sample fees</td><td>Ongoing</td><td>Independent, university-run soil and tissue analysis. Results from a neutral lab strengthen every grant report.</td></tr>
+      <tr><td><b>Arch Grants Startup Competition</b></td><td><span class="tag t-grant">Equity-free</span></td><td>$75K–$100K</td><td>Annual. The 2026 window ran Feb 18–Mar 31; expect a similar 2027 window.</td><td>Equity-free startup capital that requires a St. Louis headquarters. It can cover the company's own costs that grants won't.</td></tr>
+      <tr><td><b>Missouri Technology Corp. IDEA Fund: TechLaunch</b></td><td><span class="tag t-equity">Equity co-invest</span></td><td>$100K–$250K pre-seed</td><td>Quarterly award cycles</td><td>An optional later step. It is equity, not a grant, and requires a Missouri HQ and protectable IP.</td></tr>
+      <tr><td><b>MU Extension (St. Charles &amp; regional), NRCS field offices, Missouri SBDC, APEX Accelerator</b></td><td><span class="tag t-free">Free</span></td><td>Advisory</td><td>Ongoing</td><td>Grower recruitment, trial siting, business planning and federal-registration help.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note"><b>Regulatory path.</b> Missouri regulates soil conditioners under the Soil Conditioners Law (RSMo 266.361–266.400). The Missouri Department of Agriculture states it does not register soil amendments. If any nutrient guarantee is made, Missouri Fertilizer Law applies, administered by the Missouri Fertilizer Control Board. Our trial data will support accurate labeling in Missouri and neighboring states, several of which (for example Kansas and Illinois) register soil amendments.</div>
+</div></section>
+
+<section id="process" class="alt"><div class="wrap">
+  <h2>Process &amp; timeline</h2>
+  <p class="lead">What we have to do, in order. Dates are targets.</p>
+  <ol class="steps">
+    <li><div class="when">Nov – Dec 2026</div><b>Form the company and set the ground rules</b>
+      <ul><li>Form the entity and sign a founders agreement (Jay Bergeron and Han Ko): roles, equity, decision rights.</li>
+      <li>Sign a research and material-supply agreement with EMI covering sample supply, data ownership, publication rights and independence of results, plus permission to use the Agri-Pozz name.</li>
+      <li>Register with SAM.gov (UEI), Grants.gov and SBIR.gov. Registration can take several weeks, so start immediately.</li></ul></li>
+    <li><div class="when">Dec 2026 – Jan 2027</div><b>Plug into the St. Louis ecosystem</b>
+      <ul><li>Intake meeting with BioGenerator Labs (Helix Center) on lab access and the Grants to Business program.</li>
+      <li>Scoping call with Danforth Center Core Facilities to price a greenhouse and phenotyping study.</li>
+      <li>Identify an Extension, SWCD or certified-crop-advisor partner and two to four cooperating growers. If timing allows, submit an NCR-SARE proposal.</li></ul></li>
+    <li><div class="when">Winter – Spring 2027</div><b>Stage 1–2 research (lab and greenhouse)</b>
+      <ul><li>Material characterization, soil blends and rate trials through fee-for-service cores and MU labs.</li>
+      <li>Apply to Arch Grants (spring window) using the early data.</li></ul></li>
+    <li><div class="when">Spring – Fall 2027</div><b>Stage 3 field season and SBIR/STTR Phase I</b>
+      <ul><li>Replicated field plots with cooperating growers; soil health sampling before and after.</li>
+      <li>Prepare and submit the USDA SBIR/STTR Phase I application (fall cycle) with BioGenerator coaching.</li></ul></li>
+    <li><div class="when">2028</div><b>Publish, scale, commercialize</b>
+      <ul><li>Release a technical report and hold field days; feed data into state labeling and registrations.</li>
+      <li>Apply for SBIR Phase II and NRCS CIG On-Farm Trials for multi-state, multi-grower scale-up.</li>
+      <li>Hand a validated commercialization package to EMI and its distribution partners.</li></ul></li>
+  </ol>
+</div></section>
+
+<section id="people"><div class="wrap">
+  <h2>Who we want to talk to</h2>
+  <p class="lead">Public roles as listed by each organization; titles change, so we confirm before outreach. Contact is through warm introductions where possible.</p>
+
+  <div class="org"><h3>BioGenerator <span>BioSTL's startup arm: labs, grants coaching, investment</span></h3>
+  <div class="grid g3">
+    <div class="card"><h3>Christy Althaber</h3><p>Leads BioGenerator Labs and the agtech incubator space at the Helix Center. Our first point of contact for lab access and intake.</p></div>
+    <div class="card"><h3>Grants to Business team</h3><p>Non-dilutive grant coaching (SBIR/STTR) and Proof of Concept grants.</p></div>
+    <div class="card"><h3>BioGenerator agtech advisors</h3><p>Tom Schaefer, Kevin Coffman and Mark Martino are listed as agtech advisors. They can review study design and the path to commercialization.</p></div>
+    <div class="card"><h3>Dr. James McCarter</h3><p>Leads BioGenerator Ventures and the investment team. Relevant later, if the venture seeks investment.</p></div>
+  </div></div>
+
+  <div class="org"><h3>BioSTL <span>regional bioscience convener</span></h3>
+  <div class="grid g3">
+    <div class="card"><h3>Donn Rubin</h3><p>Founding President &amp; CEO of BioSTL; Chairman of BioGenerator.</p></div>
+    <div class="card"><h3>Vijay Chauhan</h3><p>GlobalSTL Lead. Former Monsanto business-development executive and CoverCress co-founder. Connects the regional ag network: trial partners, distributors, capital.</p></div>
+    <div class="card"><h3>Chad Zimmerman</h3><p>Senior Director, AgriFood Business Development, BioSTL Global. Industry and distribution introductions.</p></div>
+    <div class="card"><h3>BioSTL Global AgriFood Innovation Summit</h3><p>February 2027. A venue to present early results and meet growers and investors.</p></div>
+  </div></div>
+
+  <div class="org"><h3>Donald Danforth Plant Science Center <span>world's largest independent nonprofit plant-science institute</span></h3>
+  <div class="grid g3">
+    <div class="card"><h3>Katie Murphy, PhD</h3><p>Director, Phenotyping Core Facility; manages the Core Facilities Access Fund. Our contact for greenhouse and phenotyping study design.</p></div>
+    <div class="card"><h3>Plant Growth &amp; Bioanalytical Cores</h3><p>Controlled-environment growth space and nutrient and tissue chemistry, on a fee-for-service basis.</p></div>
+    <div class="card"><h3>Field Research Site (St. Charles, MO)</h3><p>140 acres at Fischer Farm, managed by Terry Beeler. Currently limited to internal projects; a possible future collaboration.</p></div>
+    <div class="card"><h3>Innovation Partnerships &amp; Entrepreneurship</h3><p>Stephanie Regagnon has been Executive Director of Innovation Partnerships (confirm current role). The Center's commercialization team is the route to an STTR research partnership.</p></div>
+  </div></div>
+
+  <div class="org"><h3>Other partners <span>neutral science and grower access</span></h3>
+  <div class="grid g3">
+    <div class="card"><h3>University of Missouri</h3><p>Soil Health Assessment Center; Soil &amp; Plant Testing Lab (Dr. Rasel Parvej); research farms; MU Extension agronomy specialists.</p></div>
+    <div class="card"><h3>NCR-SARE</h3><p>Betsy Wieland coordinates the Partnership Grant program. Office hours help shape proposals before submission.</p></div>
+    <div class="card"><h3>Peer founders</h3><p>St. Louis ag-input startups such as Agragene, for lessons on sequencing product registration against fundraising.</p></div>
+  </div></div>
+</div></section>
+
+<section id="asks" class="alt"><div class="wrap">
+  <h2>Our asks</h2>
+  <p class="lead">What we're asking of partners in the first 90 days.</p>
+  <div class="ask">
+    <div><b>BioGenerator</b>Intake meeting, Grants to Business enrollment, and a quote for Helix lab access.</div>
+    <div><b>Danforth Center</b>A scoping call and price for a Stage 2 greenhouse and phenotyping study; interest in being an STTR research partner.</div>
+    <div><b>BioSTL</b>Introductions to two to four Missouri growers or ag retailers for field plots, and a slot at the 2027 Summit.</div>
+    <div><b>Extension / SWCD</b>A professional to serve as project coordinator for an NCR-SARE Partnership proposal.</div>
+  </div>
+</div></section>
+
+<section id="team"><div class="wrap">
+  <h2>Team</h2>
+  <div class="grid g2">
+    <div class="card"><div class="kicker">Co-founder · Science, regulatory &amp; grants</div><h3>Jay Bergeron</h3><p>Environmental scientist with 18+ years in stormwater, green infrastructure, federal grant-funded recovery and regulatory compliance (ENV SP, LEED GA, CPESC). Product developer behind Agri-Pozz and Managing Director of Development at Environmental Minerals, Inc. President, St. Charles Watersheds Alliance.</p><p><a href="https://www.linkedin.com/in/jay-bergeron-b42a03260/">LinkedIn</a></p></div>
+    <div class="card"><div class="kicker">Co-founder · Business &amp; operations</div><h3>Han Ko</h3><p>Leads business operations, partnerships and company administration for the venture.</p><p><a href="https://www.linkedin.com/in/han-ko-3b8814185/">LinkedIn</a></p></div>
+  </div>
+  <div class="note"><b>Independence.</b> Agri-Pozz is supplied by Environmental Minerals, Inc., where Jay Bergeron is a part owner. We disclose this relationship. Study designs, third-party labs and publication rights are set up so the results stand on their own.</div>
+</div></section>
+
+<footer><div class="wrap">
+  <p><b>Agri-Pozz Field Research Initiative</b> (working name) · St. Louis, Missouri · Proposal draft, November 2026.</p>
+  <p>Grant figures and dates come from public program notices and are confirmed with each program before applying. Agri-Pozz™ is a product of Environmental Minerals, Inc. · <a href="https://www.environmentalminerals.net">environmentalminerals.net</a></p>
+</div></footer>
+</body>
+</html>
