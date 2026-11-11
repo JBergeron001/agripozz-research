@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bedrock Agronomics &mdash; independent research on fertilizer efficiency</title>
+<meta name="description" content="Independent agronomic research measuring how mineral soil amendments change nutrient-use efficiency, yield and return per acre in Midwest soils.">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Red+Hat+Display:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FBFBF9;color:#17211F;font-family:Inter,system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.lw,.num{font-family:"Red Hat Display",Inter,system-ui,sans-serif;letter-spacing:-.022em}
+h1,h2,h3{line-height:1.1;margin:0}
+a{color:#15635A}
+img,svg{display:block}
+.wrap{width:min(1180px,100% - 48px);margin-inline:auto}
+.lm{display:inline-flex;align-items:center;gap:11px}
+.mk{width:28px;height:39px;flex:none}
+.lw{font-size:22px;white-space:nowrap}.lw b{font-weight:900}.lw{font-weight:400}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#B07A0C}
+.eyebrow.on-dark{color:#E8B65A}
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;background:rgba(251,251,249,.9);backdrop-filter:blur(10px);border-bottom:1px solid #E4E9E6}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+.nav nav{display:flex;align-items:center;gap:6px}
+.nav nav a{font-size:15px;color:#3F4A47;text-decoration:none;padding:9px 13px;border-radius:7px}
+.nav nav a:hover{background:#EFF3F1;color:#0F3B36}
+.nav nav a[aria-current="page"]{color:#0F3B36;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:9px;background:#134A44;color:#fff!important;text-decoration:none;padding:12px 20px;border-radius:9px;font-weight:600;font-size:15px;border:1px solid #134A44}
+.btn:hover{background:#0F3B36}
+.btn.ghost{background:transparent;color:#134A44!important;border-color:#C6D4D0}
+.btn.ghost:hover{background:#EFF3F1}
+.btn.on-dark{background:#E8B65A;color:#10302C!important;border-color:#E8B65A}
+.btn.on-dark:hover{background:#F2C76E}
+.btn.ghost.on-dark{background:transparent;color:#fff!important;border-color:rgba(255,255,255,.4)}
+.btn.ghost.on-dark:hover{background:rgba(255,255,255,.1)}
+/* hero */
+.hero{background:#0F3B36;color:#fff;position:relative;overflow:hidden;padding:0}
+.hero .wrap{position:relative;z-index:2;padding:86px 0 92px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(38px,5vw,62px);font-weight:900;margin:18px 0 20px}
+.hero h1 em{font-style:normal;color:#8FD46E}
+.hero p.lead{font-size:19px;color:#CBDEDA;margin:0 0 30px;max-width:40em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.strata{position:absolute;inset:0;opacity:.5}
+.hero .panel{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:26px}
+.hero .panel h3{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#E8B65A;font-weight:700;margin-bottom:16px}
+.rows{display:flex;flex-direction:column}
+.rows div{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-top:1px solid rgba(255,255,255,.14);font-size:15px;color:#CBDEDA}
+.rows div:first-child{border-top:0}
+.rows b{color:#fff;font-weight:600}
+/* sections */
+section{padding:84px 0}
+section.alt{background:#F1F5F2;border-block:1px solid #E4E9E6}
+.hd{max-width:62ch;margin-bottom:40px}
+.hd h2{font-size:clamp(28px,3.3vw,40px);font-weight:800;margin:14px 0 14px;color:#10302C}
+.hd p{font-size:18px;color:#48544F;margin:0}
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:#fff;border:1px solid #E1E8E5;border-radius:14px;padding:26px}
+.card h3{font-size:19px;font-weight:700;margin-bottom:9px;color:#10302C}
+.card p{margin:0;color:#48544F;font-size:15.5px}
+.card .ic{width:40px;height:40px;border-radius:10px;background:#EAF2EF;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card .ic svg{width:21px;height:21px;stroke:#15635A;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+/* pipeline */
+.pipe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid #E1E8E5;border-radius:14px;overflow:hidden;background:#fff}
+.pipe>div{padding:26px;border-left:1px solid #E1E8E5}
+.pipe>div:first-child{border-left:0}
+.pipe .bar{height:6px;border-radius:3px;margin-bottom:18px}
+.pipe .st{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7D8A86;margin-bottom:7px}
+.pipe h3{font-size:18px;margin-bottom:9px;color:#10302C}
+.pipe p{font-size:15px;color:#48544F;margin:0}
+/* table */
+.tbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid #E1E8E5;border-radius:14px;overflow:hidden;font-size:15.5px}
+.tbl th{text-align:left;background:#10302C;color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:14px 18px;font-weight:700}
+.tbl td{padding:15px 18px;border-top:1px solid #E8EEEB;color:#48544F;vertical-align:top}
+.tbl td:first-child{color:#10302C;font-weight:600}
+.scroll{overflow-x:auto}
+/* dark band */
+.band{background:#10302C;color:#fff;padding:78px 0}
+.band h2{font-size:clamp(26px,3vw,38px);font-weight:800;margin:14px 0 16px}
+.band p{color:#CBDEDA;font-size:17.5px;max-width:62ch}
+.band .grid .card{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.14)}
+.band .card h3{color:#fff}.band .card p{color:#CBDEDA}
+.band .card .ic{background:rgba(255,255,255,.1)}
+.band .card .ic svg{stroke:#8FD46E}
+/* misc */
+.note{background:#FBF4E6;border:1px solid #EBD9B4;border-radius:12px;padding:18px 22px;font-size:15px;color:#5F4A20;margin-top:30px}
+.note b{color:#4A3914}
+ul.ck{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+ul.ck li{display:flex;gap:12px;font-size:16px;color:#48544F}
+ul.ck svg{width:20px;height:20px;flex:none;margin-top:3px;stroke:#5BAA46;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.qa{border-top:1px solid #E1E8E5;padding:22px 0}
+.qa h3{font-size:18px;margin-bottom:8px;color:#10302C}
+.qa p{margin:0;color:#48544F;font-size:15.5px}
+footer{background:#0B2522;color:#9FBAB5;padding:54px 0 38px;font-size:14.5px}
+footer a{color:#CFE3DF}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+.fgrid h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#E8B65A;margin:0 0 14px;font-weight:700}
+.fgrid a{display:block;text-decoration:none;padding:5px 0}
+.fgrid a:hover{color:#fff}
+.fbot{padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;color:#7FA19B}
+@media (max-width:760px){
+ .nav .wrap{height:auto;padding-block:11px;flex-wrap:wrap;row-gap:6px}
+ .lw{font-size:18px}.mk{width:23px;height:32px}
+ .nav nav{gap:2px}
+ .nav nav a{font-size:14px;padding:7px 9px}
+ .nav nav a.btn{padding:9px 14px;margin-left:4px}
+ body{font-size:16px}
+ section{padding:58px 0}
+ .band{padding:58px 0}
+}
+@media (max-width:900px){
+ .hero .wrap{grid-template-columns:1fr;padding:60px 0 66px}
+ .g3,.g4,.g2,.pipe{grid-template-columns:1fr}
+ .pipe>div{border-left:0;border-top:1px solid #E1E8E5}
+ .pipe>div:first-child{border-top:0}
+ .fgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a href="index.html" style="text-decoration:none"><span class="lm"><svg viewBox="0 0 60 84" aria-hidden="true" class="mk"><defs><clipPath id="bkh"><path d="M0 0 H31 A21 21 0 0 1 31 42 H0 Z"/><path d="M0 38 H37 A23 23 0 0 1 37 84 H0 Z"/></clipPath></defs><g clip-path="url(#bkh)"><g transform="rotate(-14 30 42)"><rect x="-48" y="-38" width="170" height="54" fill="#C8870A"/><rect x="-48" y="19.5" width="170" height="16.5" fill="#2E7A70"/><rect x="-48" y="39.5" width="170" height="16.5" fill="#1D6B63"/><rect x="-48" y="59.5" width="170" height="80" fill="#134A44"/></g></g></svg><span class="lw" style="color:#134A44"><b>Bedrock</b> Agronomics</span></span></a>
+<nav><a href="index.html" aria-current="page" class="">Home</a><a href="research.html" class="">Research &amp; services</a><a href="#contact" class="btn" style="margin-left:8px">Talk to us</a></nav>
+</div></header>
+
+<section class="hero"><svg class="strata" viewBox="0 0 1440 620" preserveAspectRatio="none" aria-hidden="true">
+<g transform="rotate(-6 720 310)">
+<rect x="-200" y="330" width="1840" height="70" fill="#15433D"/>
+<rect x="-200" y="408" width="1840" height="46" fill="#17504A" opacity=".85"/>
+<rect x="-200" y="462" width="1840" height="38" fill="#1A5B53" opacity=".6"/>
+<rect x="-200" y="508" width="1840" height="150" fill="#1D6B63" opacity=".35"/>
+<rect x="-200" y="300" width="1840" height="6" fill="#C8870A" opacity=".55"/>
+</g></svg><div class="wrap">
+<div>
+<div class="eyebrow on-dark">Independent agronomic research &middot; St. Louis, Missouri</div>
+<h1>Make every pound of fertilizer <em>go further</em>.</h1>
+<p class="lead">Bedrock Agronomics measures what mineral soil amendments actually do to nutrient-use efficiency, yield and return per acre &mdash; in real Midwest soils, under replicated trial conditions, with the results published either way.</p>
+<div class="cta"><a class="btn on-dark" href="research.html">See how we test</a><a class="btn ghost on-dark" href="#contact">Start a study</a></div>
+</div>
+<div class="panel">
+<h3>First material under study</h3>
+<div class="rows">
+<div><span>Material</span><b>Natural volcanic pozzolan</b></div>
+<div><span>Specification</span><b>ASTM C618 Class N</b></div>
+<div><span>Source region</span><b>Eastern California</b></div>
+<div><span>Question</span><b>Where does it work best?</b></div>
+<div><span>Program</span><b>Agri-Pozz Field Research Initiative</b></div>
+</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="hd"><div class="eyebrow">What we measure</div>
+<h2>Three questions decide whether an input is worth using</h2>
+<p>Growers do not buy chemistry, they buy outcomes. Every study we design answers the same three questions in numbers a farm manager and an agronomist can both act on.</p></div>
+<div class="grid g3">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 10.2A6 6 0 0 1 6 13.2C6 9.4 12 3 12 3Z"/></svg></div><h3>Nutrient-use efficiency</h3><p>How much of the applied nitrogen, phosphorus and potassium reaches the crop instead of the air or the water &mdash; and whether rates can be reduced while holding yield.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>Soil function</h3><p>Cation exchange capacity, water-holding capacity, aggregate stability and pH response, measured in the soil types the crop is actually grown in.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 7h10M5 11h4l-2 5-2-5ZM15 11h4l-2 5-2-5Z"/></svg></div><h3>Farm economics</h3><p>Cost per acre delivered, the fertilizer dollars displaced, and the return at current input prices. A result that does not pay is reported as such.</p></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<div class="hd"><div class="eyebrow">How we work</div>
+<h2>Evidence is built in stages, and each stage earns the next</h2>
+<p>We start at the cheapest level that can disprove the hypothesis. Nothing moves to field scale until the controlled work says it should.</p></div>
+<div class="pipe">
+<div><div class="bar" style="background:#C8870A"></div><div class="st">Stage 01</div><h3>Characterize</h3><p>Mineralogy, particle size, exchange capacity and nutrient retention when blended with representative soils.</p></div>
+<div><div class="bar" style="background:#2E7A70"></div><div class="st">Stage 02</div><h3>Controlled growth</h3><p>Greenhouse rate trials crossing application rate against full and reduced fertilizer, with uptake and leachate measured.</p></div>
+<div><div class="bar" style="background:#1D6B63"></div><div class="st">Stage 03</div><h3>Replicated field</h3><p>Randomized on-farm strip and plot trials with cooperating growers. Untreated control, label rate, and label rate with reduced fertilizer.</p></div>
+<div><div class="bar" style="background:#134A44"></div><div class="st">Stage 04</div><h3>Analyze &amp; publish</h3><p>Statistical analysis, an economic model per acre, an open technical report, and data that supports accurate labeling.</p></div>
+</div>
+<div class="note"><b>Claims standard.</b> We report fertilizer-efficiency and soil-property outcomes only. We make no pest or disease claims. Any figure drawn from existing literature is labelled as literature, not as a result of our trials, until our own replicated data supports it.</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="hd"><div class="eyebrow">The analysis layer</div>
+<h2>From a lab result to an application rate someone can use</h2>
+<p>A number on a lab report is not a recommendation. We model the trial data against crop, soil component, rate, blend and season so the output is a rate and a blend for a named situation &mdash; with the economics attached.</p></div>
+<div class="grid g4">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 7h10v10H7z"/><path d="M4 10h3M4 14h3M17 10h3M17 14h3M10 4v3M14 4v3M10 17v3M14 17v3"/></svg></div><h3>Modelled, not guessed</h3><p>Trial results are fitted across rate, crop and soil type so the response curve, not a single data point, drives the recommendation.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></div><h3>Variable by variable</h3><p>Crop, soil texture and chemistry, blend ratio, application rate, placement, season and weather are carried as explicit variables.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div><h3>A rate, not a range</h3><p>The deliverable is the rate and blend that maximised response for that crop and soil, with the confidence we actually have.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Priced per acre</h3><p>Every recommendation carries delivered cost, displaced fertilizer and net return, so a grower can compare it to doing nothing.</p></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<div class="hd"><div class="eyebrow">First material</div>
+<h2>Natural pozzolan, tested across crops and conditions</h2>
+<p>Pozzolan is the first material through our pipeline. It is a porous, silica-rich volcanic mineral with a long record in construction and a thin one in Midwest agronomy. Our programme is built to find where it helps, by how much, and where it does not.</p></div>
+<div class="grid g2">
+<div class="card"><h3>What we are testing against</h3>
+<ul class="ck" style="margin-top:14px">
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Row crops first &mdash; corn and soybean &mdash; then a forage or specialty crop</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Missouri soil types: silt loam, claypan and river bottomland</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Multiple application rates, crossed with full and reduced fertilizer</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Blends with conventional fertilizer, not only standalone application</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Season and weather variation across more than one growing year</span></li>
+</ul></div>
+<div class="card"><h3>What a result looks like</h3>
+<ul class="ck" style="margin-top:14px">
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>The rate at which response peaks, by crop and soil type</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>How far fertilizer can be cut while holding yield, if at all</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Change in soil function over one to three seasons</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Nutrient movement toward water, measured not assumed</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Return per acre at current fertilizer and freight prices</span></li>
+</ul></div>
+</div>
+<div class="note"><b>Disclosure.</b> Agri-Pozz is supplied by Environmental Minerals, Inc., where both founders hold executive roles and one is a part owner. We disclose this in every study, every application and every report. Study design and analysis are guided by independent university and core-facility scientists, and we hold the right to publish all results.</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="hd" style="margin-bottom:34px"><div class="eyebrow on-dark">Independence by design</div>
+<h2>Research anyone can check</h2>
+<p>An input company can fund research. It cannot credibly grade its own homework. Our structure is built so a sceptical agronomist, grant reviewer or regulator can follow the work.</p></div>
+<div class="grid g3">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.4 2.9 7.9 7 9 4.1-1.1 7-4.6 7-9V6l-7-3Z"/><path d="m9.5 12 1.8 1.8L15 10"/></svg></div><h3>Neutral laboratories</h3><p>Soil, tissue and water analysis runs through independent university and core facilities, not an in-house bench.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z"/><path d="M8 7h7M8 11h7"/></svg></div><h3>Publish either way</h3><p>Positive, negative or inconclusive, the result is published. No supplier holds approval over what we report.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.7 3h10.6A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg></div><h3>Named scientists</h3><p>University and research-institute scientists serve as principal investigators and advisors on the studies they lead.</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="grid g2" style="align-items:center;gap:48px">
+<div>
+<div class="eyebrow">Work with us</div>
+<h2 style="font-size:clamp(28px,3.3vw,40px);font-weight:800;margin:14px 0 16px;color:#10302C">Have a material you need measured?</h2>
+<p style="color:#48544F;font-size:18px;margin:0 0 26px">We design and run replicated trials for input manufacturers, distributors, grower groups and research partners &mdash; including the grant-funded work that makes a programme affordable.</p>
+<div class="cta"><a class="btn" href="mailto:[YOUR EMAIL]">Email us</a><a class="btn ghost" href="research.html">Read the research standards</a></div>
+</div>
+<div class="card">
+<h3 style="margin-bottom:16px">What to send in a first message</h3>
+<ul class="ck">
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>The material and its specification</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>The crops and regions you care about</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>What you need to prove, and to whom</span></li>
+<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Your timeline and whether grant funding is in play</span></li>
+</ul>
+<p style="margin-top:18px;font-size:14.5px;color:#7D8A86">We reply with a scoped study outline and an honest view of what the data can and cannot support.</p>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div class="fgrid">
+<div><span class="lm"><svg viewBox="0 0 60 84" aria-hidden="true" class="mk"><defs><clipPath id="bkf"><path d="M0 0 H31 A21 21 0 0 1 31 42 H0 Z"/><path d="M0 38 H37 A23 23 0 0 1 37 84 H0 Z"/></clipPath></defs><g clip-path="url(#bkf)"><g transform="rotate(-14 30 42)"><rect x="-48" y="-38" width="170" height="54" fill="#E3A62B"/><rect x="-48" y="19.5" width="170" height="16.5" fill="#8FC9BF"/><rect x="-48" y="39.5" width="170" height="16.5" fill="#CFE3DF"/><rect x="-48" y="59.5" width="170" height="80" fill="#FFFFFF"/></g></g></svg><span class="lw" style="color:#FFFFFF"><b>Bedrock</b> Agronomics</span></span><p style="margin:16px 0 0;max-width:38ch">Independent agronomic research on soil amendments and fertilizer efficiency. St.&nbsp;Louis, Missouri.</p></div>
+<div><h4>Company</h4><a href="index.html">Home</a><a href="research.html">Research &amp; services</a><a href="research.html#standards">Study standards</a><a href="research.html#faq">FAQ</a></div>
+<div><h4>Contact</h4><a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a><a href="tel:[YOUR PHONE]">[YOUR PHONE]</a><span style="display:block;padding:5px 0">St. Louis, Missouri</span></div>
+</div>
+<div class="fbot"><span>&copy; 2026 Bedrock Agronomics, LLC. Bedrock Agronomics, LLC is in formation.</span><span>Agri-Pozz&trade; is a product of Environmental Minerals, Inc.</span></div>
+</div></footer>
+</body>
+</html>
