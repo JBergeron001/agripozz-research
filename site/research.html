@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Research &amp; services &mdash; Bedrock Agronomics</title>
-<meta name="description" content="How Bedrock Agronomics designs replicated trials, what it measures, and the services it offers input manufacturers, distributors and grower groups.">
+<title>Research &mdash; Bedrock Agronomics</title>
+<meta name="description" content="How Bedrock Agronomics designs replicated trials and what it measures.">
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,12 +56,12 @@ header.nav{position:sticky;top:0;z-index:40;background:rgba(247,243,233,.92);bac
 .facts span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#E8B65A;font-weight:700;margin-bottom:9px}
 .facts b{font-family:"Red Hat Display",sans-serif;font-size:21px;font-weight:700;line-height:1.2}
 /* sections */
-section{padding:92px 0}
+section{padding:124px 0}
 .cream2{background:#EFE8D8}
 .white{background:#fff}
-.hd{max-width:60ch;margin-bottom:46px}
+.hd{max-width:46ch;margin-bottom:60px}
 .hd h2{font-size:clamp(30px,3.7vw,46px);font-weight:800;color:#102A1C;margin-bottom:18px}
-.hd p{font-size:19px;color:#4A554E;margin:0}
+.hd p{font-size:19px;color:#5A655E;margin:0}
 .grid{display:grid;gap:24px}
 .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -99,6 +99,45 @@ footer a{color:#D9EAE6}
 .fgrid a{display:block;text-decoration:none;padding:5px 0}
 .fgrid a:hover{color:#fff}
 .fbot{padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:#7D9B93}
+
+/* photography */
+.bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.bg:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,32,26,.95) 0%,rgba(8,32,26,.86) 42%,rgba(8,32,26,.42) 100%)}
+.bg.v:after{background:linear-gradient(180deg,rgba(8,32,26,.78) 0%,rgba(8,32,26,.9) 100%)}
+.bg.b:after{background:linear-gradient(to top,rgba(8,32,26,.88) 0%,rgba(8,32,26,.15) 62%)}
+.hero.ph{background:#0B2520;color:#fff;padding:100px 0 88px}
+.hero.ph:after{display:none}
+.hero.ph h1{color:#fff}
+.hero.ph h1 span{color:#8ECB4E}
+.hero.ph p.lead{color:#D5E4DF}
+.hero.ph .lab{color:#E8B65A}
+.dark.ph,.imgband{position:relative;overflow:hidden}
+.dark.ph .wrap{position:relative;z-index:2}
+.imgband{height:460px;padding:0;display:flex;align-items:flex-end}
+.imgband .wrap{position:relative;z-index:2;padding-bottom:44px}
+.imgband p{color:#fff;font-size:22px;font-weight:600;max-width:30ch;margin:0;font-family:"Red Hat Display",sans-serif;line-height:1.25}
+.imgband span{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#E8B65A;font-weight:700;margin-bottom:12px}
+.shot{width:100%;height:460px;object-fit:cover;border-radius:18px;box-shadow:0 22px 50px rgba(20,40,30,.17)}
+
+/* minimal system */
+.xl{font-size:clamp(42px,6.6vw,88px);font-weight:900;line-height:.97;letter-spacing:-.032em}
+.one{font-size:clamp(26px,3vw,38px);font-weight:700;line-height:1.22;letter-spacing:-.022em;color:#102A1C;max-width:21ch;margin:0}
+.dark .one{color:#fff}
+.rowlist{border-top:1px solid #DDD5C3}
+.rowlist>div{display:grid;grid-template-columns:76px 1.05fr 1.15fr;gap:32px;padding:34px 0;border-bottom:1px solid #DDD5C3;align-items:baseline}
+.rowlist .k{font-family:"Red Hat Display",sans-serif;font-weight:800;font-size:13px;letter-spacing:.14em;color:#BF6334}
+.rowlist h3{font-size:clamp(22px,2.2vw,29px);font-weight:700;color:#102A1C}
+.rowlist p{margin:0;color:#5A655E;font-size:16.5px}
+.dark .rowlist,.dark .rowlist>div{border-color:rgba(255,255,255,.17)}
+.dark .rowlist h3{color:#fff}.dark .rowlist p{color:#C3D6CF}.dark .rowlist .k{color:#E8B65A}
+.fine{font-size:14.5px;color:#7C857D;max-width:62ch;margin:44px 0 0;line-height:1.6}
+.dark .fine{color:#9FB8B0}
+.link{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:17px;text-decoration:none;color:#102A1C;border-bottom:2px solid #8ECB4E;padding-bottom:3px}
+.hero.ph .link,.dark .link{color:#fff}
+.link:hover{border-color:#fff}
+.card{box-shadow:none}
+@media (max-width:860px){.rowlist>div{grid-template-columns:1fr;gap:10px;padding:26px 0}section{padding:76px 0}}
+@media (max-width:980px){.imgband{height:340px}.shot{height:300px}.hero.ph{padding:62px 0 58px}}
 @media (max-width:980px){
  .hero .wrap,.split{grid-template-columns:1fr;gap:38px}
  .hero{padding:52px 0 72px}.hero:after{height:72px}
@@ -122,15 +161,14 @@ footer a{color:#D9EAE6}
 <body>
 <header class="nav"><div class="wrap">
 <a href="index.html" style="text-decoration:none"><span class="lm"><svg viewBox="0 0 60 84" aria-hidden="true" class="mk"><defs><clipPath id="bkr"><path d="M0 0 H31 A21 21 0 0 1 31 42 H0 Z"/><path d="M0 38 H37 A23 23 0 0 1 37 84 H0 Z"/></clipPath></defs><g clip-path="url(#bkr)"><g transform="rotate(-14 30 42)"><rect x="-48" y="-38" width="170" height="54" fill="#C8870A"/><rect x="-48" y="19.5" width="170" height="16.5" fill="#2E7A70"/><rect x="-48" y="39.5" width="170" height="16.5" fill="#1D6B63"/><rect x="-48" y="59.5" width="170" height="80" fill="#134A44"/></g></g></svg><span class="lw" style="color:#134A44"><b>Bedrock</b> Agronomics</span></span></a>
-<nav><a href="index.html">Home</a><a href="research.html" aria-current="page">Research &amp; services</a><a href="#contact" class="btn" style="margin-left:8px">Start a study</a></nav>
+<nav><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="#contact" class="btn" style="margin-left:8px">Start a study</a></nav>
 </div></header>
 
-<section class="hero"><div class="wrap" style="grid-template-columns:1.05fr .95fr">
+<section class="hero ph"><div class="bg" style="background-image:url(https://images.unsplash.com/photo-1703850827351-a1be4d85a095?auto=format&fit=crop&q=70&w=2000)"></div><div class="wrap" style="grid-template-columns:1.05fr .95fr">
 <div>
-<div class="lab">Research &amp; services</div>
-<h1 style="font-size:clamp(34px,4.6vw,58px)">How we design a study, and what you get back</h1>
-<p class="lead">Our standards are written down, so a grower, a grant reviewer and a sceptical agronomist can all audit the same work.</p>
-<div class="cta"><a class="btn" href="#contact">Start a study</a><a class="btn o" href="#standards">Our standards</a></div>
+<div class="lab">Research</div>
+<h1 style="font-size:clamp(36px,5vw,62px);font-weight:900">How we design a study.</h1>
+<p class="lead" style="max-width:32ch;margin-top:22px">Written down, so anyone can audit the same work.</p>
 </div>
 <div><svg viewBox="0 0 600 460" role="img" aria-label="Aerial diagram of randomized replicated trial plots" class="fig">
 <rect width="600" height="460" rx="18" fill="#5E3F27"/>
@@ -141,73 +179,62 @@ footer a{color:#D9EAE6}
 </div></section>
 
 <section class="white"><div class="wrap">
-<div class="hd"><div class="lab">Research questions</div><h2>The five questions every programme answers</h2></div>
-<div class="grid g2">
-<div class="card" style="--c:#3F8C22"><div class="n">01</div><h3>Efficiency</h3><p>Does the material improve nitrogen and phosphorus use efficiency in these soils, and by how much?</p></div>
-<div class="card" style="--c:#8ECB4E"><div class="n">02</div><h3>Substitution</h3><p>Can fertilizer rates be reduced while holding yield &mdash; and at what application rate of the material?</p></div>
-<div class="card" style="--c:#BF6334"><div class="n">03</div><h3>Soil function</h3><p>What happens to aggregate stability, water-holding capacity and exchange capacity over one to three seasons?</p></div>
-<div class="card" style="--c:#6FA8C7"><div class="n">04</div><h3>Water</h3><p>Does nutrient leaching or runoff change? This is where agronomy meets watershed and regulatory interest.</p></div>
-<div class="card" style="--c:#E0A42E;grid-column:1/-1"><div class="n">05</div><h3>Economics</h3><p>What is the return per acre at current fertilizer and freight prices, including the delivered cost of the material? A material that works agronomically but not economically is reported as exactly that.</p></div>
+<div class="hd"><div class="lab">Questions</div><h2>Five, every time.</h2></div>
+<div class="rowlist">
+<div><div class="k">01</div><h3>Efficiency</h3><p>Does nitrogen and phosphorus use efficiency improve, and by how much?</p></div>
+<div><div class="k">02</div><h3>Substitution</h3><p>Can fertilizer fall while yield holds &mdash; and at what rate?</p></div>
+<div><div class="k">03</div><h3>Soil function</h3><p>What changes over one to three seasons?</p></div>
+<div><div class="k">04</div><h3>Water</h3><p>Does leaching or runoff move?</p></div>
+<div><div class="k">05</div><h3>Economics</h3><p>What is the return per acre, freight included?</p></div>
 </div></div></section>
 
 <section id="standards" class="cream2"><div class="wrap">
-<div class="hd"><div class="lab g">Study standards</div><h2>Design rules we do not bend</h2>
-<p>These are the conditions that separate a trial from a testimonial.</p></div>
-<div class="grid g2">
-<div class="card" style="--c:#3F8C22"><h3>Trial design</h3><ul class="ck">
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Randomized and replicated, never a single strip</span></li><li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>An untreated control in every trial</span></li>
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>At least three arms: control, label rate, label rate with reduced fertilizer</span></li>
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Treatments assigned before the season, not chosen after</span></li>
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Pre-registered endpoints, so the measure cannot move to fit the result</span></li></ul></div>
-<div class="card" style="--c:#134A44"><h3>Measurement</h3><ul class="ck">
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Baseline soil sampling before treatment, same points after</span></li>
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Independent university or core-facility laboratories</span></li>
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Tissue analysis for uptake, not yield alone</span></li>
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Statistical analysis stated with the trial, including the power we have</span></li>
-<li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Raw data retained and available to funders and reviewers</span></li></ul></div>
+<div class="hd"><div class="lab g">Standards</div><h2>Rules we do not bend.</h2></div>
+<div class="rowlist">
+<div><div class="k">DESIGN</div><h3>Randomized and replicated</h3><p>Never a single strip. An untreated control in every trial.</p></div>
+<div><div class="k">ARMS</div><h3>Three, minimum</h3><p>Control, label rate, label rate with reduced fertilizer.</p></div>
+<div><div class="k">ENDPOINTS</div><h3>Pre-registered</h3><p>The measure cannot move to fit the result.</p></div>
+<div><div class="k">LABS</div><h3>Independent</h3><p>University and core facilities, not an in-house bench.</p></div>
+<div><div class="k">DATA</div><h3>Retained</h3><p>Raw data available to funders and reviewers.</p></div>
 </div></div></section>
 
 <section><div class="wrap">
-<div class="hd"><div class="lab a">Endpoints</div><h2>What gets measured</h2></div>
+<div class="hd"><div class="lab a">Endpoints</div><h2>What gets measured.</h2></div>
 <div class="scroll"><table class="tbl">
-<thead><tr><th>Domain</th><th>Measures</th><th>Why it matters</th></tr></thead><tbody>
-<tr><td>Soil chemistry</td><td>pH, cation exchange capacity, available phosphorus and potassium, organic matter</td><td>Establishes whether the material changes the soil's ability to hold and release nutrients</td></tr>
-<tr><td>Soil physics</td><td>Water-holding capacity, aggregate stability, infiltration</td><td>Drives drought resilience and how the crop performs in a dry or wet year</td></tr>
-<tr><td>Plant response</td><td>Biomass, tissue nutrient concentration, silicon uptake, yield and quality</td><td>Shows whether improved soil conditions actually reach the crop</td></tr>
-<tr><td>Water quality</td><td>Leachate and runoff nutrient concentration</td><td>Supports watershed claims and interests regulators and conservation funders</td></tr>
-<tr><td>Economics</td><td>Delivered cost per acre, fertilizer displaced, net return</td><td>Decides whether a grower would buy it a second time</td></tr>
+<thead><tr><th>Domain</th><th>Measures</th></tr></thead><tbody>
+<tr><td>Soil chemistry</td><td>pH, cation exchange capacity, available phosphorus and potassium, organic matter</td></tr>
+<tr><td>Soil physics</td><td>Water-holding capacity, aggregate stability, infiltration</td></tr>
+<tr><td>Plant response</td><td>Biomass, tissue nutrient concentration, silicon uptake, yield and quality</td></tr>
+<tr><td>Water quality</td><td>Leachate and runoff nutrient concentration</td></tr>
+<tr><td>Economics</td><td>Delivered cost per acre, fertilizer displaced, net return</td></tr>
 </tbody></table></div></div></section>
 
 <section class="white"><div class="wrap">
-<div class="hd"><div class="lab">The variable matrix</div><h2>One material, many conditions</h2>
-<p>A soil amendment rarely performs the same way twice. The programme is built to find the combinations where the response is real and repeatable &mdash; starting with natural pozzolan.</p></div>
-<div class="grid g4">
-<div class="card" style="--c:#3F8C22"><div class="ic" style="--c:#3F8C22;--b:#EAF3E4"><svg viewBox="0 0 24 24"><path d="M4 20c0-8 6-13 16-13 0 10-5 15-13 15-1.5 0-3-.7-3-2Z"/><path d="M4 20c4-5 8-8 12-9"/></svg></div><h3>Crop</h3><p>Corn and soybean first, then a forage or specialty crop, each with its own nutrient demand pattern.</p></div>
-<div class="card" style="--c:#BF6334"><div class="ic" style="--c:#BF6334;--b:#F8E8DF"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>Soil component</h3><p>Texture, clay content, organic matter, pH and baseline exchange capacity: silt loam, claypan and bottomland.</p></div>
-<div class="card" style="--c:#B07A0C"><div class="ic" style="--c:#B07A0C;--b:#FBF1DC"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.7 3h10.6A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg></div><h3>Rate &amp; blend</h3><p>Application rate, blend ratio with conventional fertilizer, and placement &mdash; broadcast, banded or incorporated.</p></div>
-<div class="card" style="--c:#6FA8C7"><div class="ic" style="--c:#6FA8C7;--b:#E8F1F6"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 10.2A6 6 0 0 1 6 13.2C6 9.4 12 3 12 3Z"/></svg></div><h3>Season &amp; climate</h3><p>Rainfall, temperature and drought stress across more than one growing year, because a single season proves little.</p></div>
+<div class="hd"><div class="lab">Variables</div><h2>One material, many conditions.</h2></div>
+<div class="rowlist">
+<div><div class="k">CROP</div><h3>Corn, soybean, forage</h3><p>Each with its own nutrient demand pattern.</p></div>
+<div><div class="k">SOIL</div><h3>Silt loam, claypan, bottomland</h3><p>Texture, clay, organic matter, baseline exchange capacity.</p></div>
+<div><div class="k">RATE</div><h3>Rate, blend, placement</h3><p>Broadcast, banded or incorporated.</p></div>
+<div><div class="k">SEASON</div><h3>More than one year</h3><p>A single season proves little.</p></div>
 </div></div></section>
 
-<section class="dark"><div class="wrap">
-<div class="hd"><div class="lab w">Services</div><h2>What we do for clients and partners</h2>
-<p>Most programmes combine client-funded work with non-dilutive grant funding, which lowers the cost to everyone and raises the credibility of the result.</p></div>
-<div class="grid g3">
-<div class="card" style="--c:#8ECB4E"><div class="ic" style="--c:#8ECB4E;--b:rgba(255,255,255,.1)"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.7 3h10.6A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg></div><h3>Study design &amp; execution</h3><p>Protocol development, grower recruitment, plot layout, sampling, laboratory coordination and season management.</p></div>
-<div class="card" style="--c:#E8B65A"><div class="ic" style="--c:#E8B65A;--b:rgba(255,255,255,.1)"><svg viewBox="0 0 24 24"><path d="M7 7h10v10H7z"/><path d="M4 10h3M4 14h3M17 10h3M17 14h3M10 4v3M14 4v3M10 17v3M14 17v3"/></svg></div><h3>Data analysis &amp; modelling</h3><p>Statistical analysis, response-curve modelling across crop and soil variables, and economic modelling per acre.</p></div>
-<div class="card" style="--c:#8FC9BF"><div class="ic" style="--c:#8FC9BF;--b:rgba(255,255,255,.1)"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z"/><path d="M8 7h7M8 11h7"/></svg></div><h3>Reporting &amp; support</h3><p>Technical reports, field days, data packages for labeling and registration, and support for grant applications.</p></div>
+<section class="dark ph"><div class="bg v" style="background-image:url(https://images.unsplash.com/photo-1524486361537-8ad15938e1a3?auto=format&fit=crop&q=70&w=2000)"></div><div class="wrap">
+<div class="hd" style="margin-bottom:60px"><div class="lab w">Services</div><h2>What we do for clients.</h2></div>
+<div class="rowlist">
+<div><div class="k">01</div><h3>Study design and execution</h3><p>Protocol, growers, plots, sampling, laboratory coordination.</p></div>
+<div><div class="k">02</div><h3>Analysis and modelling</h3><p>Response curves across crop and soil. Economics per acre.</p></div>
+<div><div class="k">03</div><h3>Reporting</h3><p>Technical reports, field days, data for labeling and grant applications.</p></div>
 </div></div></section>
 
-
-<section id="contact" class="cream2"><div class="wrap" style="text-align:center">
-<div class="lab" style="margin-bottom:14px">Get in touch</div>
-<h2 style="font-size:clamp(30px,3.7vw,46px);font-weight:800;color:#102A1C;margin:0 auto 18px;max-width:20ch">Tell us what you need measured</h2>
-<p style="font-size:18.5px;color:#4A554E;margin:0 auto 28px;max-width:58ch">Send the material, the crops and the question. We reply with a scoped outline and a straight answer on what the data could support.</p>
-<div class="cta" style="justify-content:center"><a class="btn" href="mailto:[YOUR EMAIL]">Email us</a><a class="btn o" href="index.html">Back to home</a></div>
+<section id="contact" class="cream2"><div class="wrap">
+<div class="lab">Contact</div>
+<h2 class="xl" style="max-width:14ch;color:#102A1C">Tell us what to measure.</h2>
+<div class="cta" style="margin-top:34px"><a class="btn" href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a></div>
 </div></section>
 
 <footer><div class="wrap"><div class="fgrid"><div><span class="lm"><svg viewBox="0 0 60 84" aria-hidden="true" class="mk"><defs><clipPath id="bkf"><path d="M0 0 H31 A21 21 0 0 1 31 42 H0 Z"/><path d="M0 38 H37 A23 23 0 0 1 37 84 H0 Z"/></clipPath></defs><g clip-path="url(#bkf)"><g transform="rotate(-14 30 42)"><rect x="-48" y="-38" width="170" height="54" fill="#E8B65A"/><rect x="-48" y="19.5" width="170" height="16.5" fill="#8FC9BF"/><rect x="-48" y="39.5" width="170" height="16.5" fill="#D9EAE6"/><rect x="-48" y="59.5" width="170" height="80" fill="#FFFFFF"/></g></g></svg><span class="lw" style="color:#FFFFFF"><b>Bedrock</b> Agronomics</span></span><p style="margin:18px 0 0;max-width:36ch">Independent agronomic research on soil amendments and fertilizer efficiency. St.&nbsp;Louis, Missouri.</p></div>
-<div><h4>Company</h4><a href="index.html">Home</a><a href="research.html">Research &amp; services</a><a href="research.html#standards">Study standards</a></div>
+<div><h4>Company</h4><a href="index.html">Home</a><a href="research.html">Research</a></div>
 <div><h4>Contact</h4><a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a><a href="tel:[YOUR PHONE]">[YOUR PHONE]</a><span style="display:block;padding:5px 0">St. Louis, Missouri</span></div>
-</div><div class="fbot"><span>&copy; 2026 Bedrock Agronomics, LLC &middot; in formation</span><span>Agri-Pozz&trade; is a product of Environmental Minerals, Inc.</span></div></div></footer>
+</div><div class="fbot"><span>&copy; 2026 Bedrock Agronomics, LLC &middot; in formation</span><span>Photographs licensed via Unsplash</span><span>Agri-Pozz&trade; is a product of Environmental Minerals, Inc.</span></div></div></footer>
 </body>
 </html>
